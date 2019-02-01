@@ -84,7 +84,7 @@ class MusicLibraryController
     song_array = Song.all.sort_by! { |song| song.name }
     puts "Which song number would you like to play?"
     choice = gets.chomp.to_i
-    if choice <= song_array.length
+    if choice <= song_array.length && choice >= 1
       puts "Playing #{song_array[choice - 1].name} by #{song_array[choice - 1].artist.name}"
     end
   end

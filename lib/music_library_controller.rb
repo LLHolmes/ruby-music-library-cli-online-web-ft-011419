@@ -69,8 +69,6 @@ class MusicLibraryController
     choice = gets.chomp
     if Artist.find_by_name(choice) != nil
       specific_array = Artist.find_by_name(choice).songs.sort_by! { |song| song.name }
-      # specific_array = specific_artist.songs.sort_by! { |song| song.name }
-      # puts specific_array
       specific_array.each_with_index do |mx, i|
         puts "#{i+1}. #{mx.name} - #{mx.genre.name}"
       end
@@ -78,6 +76,14 @@ class MusicLibraryController
   end
   
   def list_songs_by_genre
+    puts "Please enter the name of an genre:"
+    choice = gets.chomp
+    if Genre.find_by_name(choice) != nil
+      specific_array = Genre.find_by_name(choice).songs.sort_by! { |song| song.name }
+      specific_array.each_with_index do |mx, i|
+        puts "#{i+1}. #{mx.artist.name} - #{mx.name}"
+      end
+    end
   end
 
   def play_song

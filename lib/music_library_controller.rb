@@ -25,11 +25,11 @@ class MusicLibraryController
       command = gets.chomp
       case command
       #   when "list songs"
-      #     Songs.all.name
+      #     list_songs
       #   when "list artists"
-      #     Artist.all.name
+      #     list_artists
       #   when "list genres"
-      #     Genre.all.name
+      #     list_genres
       #   when "list artist"
       #     puts "Which artist would you like?"
       #     artist = gets.chomp
@@ -71,6 +71,9 @@ class MusicLibraryController
   end
   
   def list_songs_by_artist
+    puts "Which artist would you like?"
+          artist = gets.chomp
+          Artist.find_by_name(artist)
   end
   
   def list_songs_by_genre

@@ -57,16 +57,16 @@ class MusicLibraryController
   end
   
   def list_artists
-    artist_list = Artist.all.sort_by!  { |artist| artist.name }
-    artist_list.each_with_index do |artist, i|
+    artist_array = Artist.all.sort_by!  { |artist| artist.name }
+    artist_array.each_with_index do |artist, i|
       puts "#{i+1}. #{artist.name}"
     end
   end
   
   def list_genres
-    song_array = Song.all.sort_by! { |song| song.name }
-    song_array.each_with_index do |song, i|
-      puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    genre_array = Genre.all.sort_by! { |genre| genre.name }
+    genre_array.each_with_index do |genre, i|
+      puts "#{i+1}. #{genre.name}"
     end
   end
   

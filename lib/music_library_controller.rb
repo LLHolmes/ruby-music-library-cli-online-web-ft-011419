@@ -25,17 +25,11 @@ class MusicLibraryController
       #   when "list genres"
       #     list_genres
       #   when "list artist"
-      #     puts "Which artist would you like?"
-      #     artist = gets.chomp
-      #     Artist.find_by_name(artist)
+      #     list_songs_by_artist
       #   when "list genre"
-      #     puts "Which genre would you like?"
-      #     genre = gets.chomp
-      #     Genre.find_by_name(genre)
+      #     list_songs_by_genre
       #   when "play song"
-      #     puts "Which song would you like?"
-      #     song = gets.chomp
-      #     puts "Playing song."
+      #     play_song
         when "exit"
           # puts "Goodbye!"
           break

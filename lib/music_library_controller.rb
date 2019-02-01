@@ -81,10 +81,13 @@ class MusicLibraryController
   end
 
   def play_song
+    song_array = Song.all.sort_by! { |song| song.name }
     list_songs
     puts "Which song number would you like to play?"
     choice = gets.chomp
-    puts "Playing #{choice}."
+    if choice <= song_array.length
+      puts "Playing #{choice}."
+    end
   end
   
 end

@@ -51,7 +51,7 @@ class MusicLibraryController
   
   def list_songs
     song_array = Song.all.collect { |song| song.name.sort }
-    puts song_arry
+    puts song_array
      # "1. Thundercat - ForLove I Come - dance"
   end
   

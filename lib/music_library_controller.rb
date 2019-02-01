@@ -51,8 +51,10 @@ class MusicLibraryController
   
   def list_songs
     song_array = Song.all.sort_by! { |song| song.name } #collect { |song| song.name }.sort
-    puts song_array
-    # song_array.each_with_index do |song, i|
+    # puts song_array
+    song_array.each_with_index do |song, i|
+      puts "#{i+1}. #{song.artist} - #{song.name} - #{song.genre}"
+    end
      # "1. Thundercat - ForLove I Come - dance"
   end
   

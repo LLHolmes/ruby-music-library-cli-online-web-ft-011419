@@ -1,9 +1,3 @@
-# require "pry"
-# require_relative "./MusicImporter.rb"
-# require_relative "./Artists.rb"
-# require_relative "./Genre.rb"
-# require_relative "./Song.rb"
-
 class MusicLibraryController
   
   def initialize(path = ("./db/mp3s"))
@@ -73,7 +67,8 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artist = gets.chomp
-    Artist.find_by_name(artist)
+    specific_array = Artist.find_by_name(artist).sort_by! { |item| item.song.name }
+    
   end
   
   def list_songs_by_genre

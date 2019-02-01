@@ -85,9 +85,9 @@ class MusicLibraryController
     list_songs
     puts "Which song number would you like to play?"
     choice = gets.chomp
-    if choice.to_i <= song_array.length
-      puts "Playing #{choice}."
-    end
+    # if choice.to_i <= song_array.length
+    #   puts "Playing #{choice}."
+    # end
   end
   
 end

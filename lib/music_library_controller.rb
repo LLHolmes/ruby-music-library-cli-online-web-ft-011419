@@ -67,12 +67,11 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     # choice = gets.chomp
-    choice = "T-Rex"
-    specific_array = Artist.find_by_name(choice)#.sort_by! { |song| song.name }
-    puts specific_array
-    specific_array.each_with_index do |mx, i|
-      puts "#{i+1}. #{mx.song.name}"
-    end
+    # specific_array = Artist.find_by_name(choice)#.sort_by! { |song| song.name }
+    # puts specific_array
+    # specific_array.each_with_index do |mx, i|
+    #   puts "#{i+1}. #{mx.song.name}"
+    # end
   end
   
   def list_songs_by_genre

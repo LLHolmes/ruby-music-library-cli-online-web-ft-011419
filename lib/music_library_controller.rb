@@ -70,9 +70,10 @@ class MusicLibraryController
     if Artist.find_by_name(choice) != nil
       specific_array = Artist.find_by_name(choice).songs.sort_by! { |song| song.name }
       # specific_array = specific_artist.songs.sort_by! { |song| song.name }
-      puts specific_array
-    specific_array.each_with_index do |mx, i|
-      puts "#{i+1}. #{mx.name} - #{mx.genre.name}"
+      # puts specific_array
+      specific_array.each_with_index do |mx, i|
+        puts "#{i+1}. #{mx.name} - #{mx.genre.name}"
+      end
     end
   end
   

@@ -76,7 +76,7 @@ class MusicLibraryController
   end
   
   def list_songs_by_genre
-    puts "Please enter the name of an genre:"
+    puts "Please enter the name of a genre:"
     choice = gets.chomp
     if Genre.find_by_name(choice) != nil
       specific_array = Genre.find_by_name(choice).songs.sort_by! { |song| song.name }

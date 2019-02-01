@@ -50,11 +50,24 @@ class MusicLibraryController
   end
   
   def list_songs
-    song_array = Songs.all.collect { |song| song.name }.sort
+    song_array = Song.all.collect { |song| song.name }.sort
     
   end
   
+  def list_artists
+  end
   
+  def list_genres
+  end
+  
+  def list_songs_by_artist
+  end
+  
+  def list_songs_by_genre
+  end
+
+  def play_song
+  end
   
 end
 

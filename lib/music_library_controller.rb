@@ -50,7 +50,7 @@ class MusicLibraryController
   end
   
   def list_songs
-    song_array = Song.all.collect { |song| song.name.sort }
+    song_array = Song.all.collect { |song| song.name }.sort
     puts song_array
      # "1. Thundercat - ForLove I Come - dance"
   end

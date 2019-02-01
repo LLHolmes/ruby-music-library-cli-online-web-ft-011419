@@ -72,7 +72,7 @@ class MusicLibraryController
       puts specific_array
     # specific_array.each_with_index do |mx, i|
     #   puts "#{i+1}. #{mx.song.name}"
-    # end
+    end
   end
   
   def list_songs_by_genre

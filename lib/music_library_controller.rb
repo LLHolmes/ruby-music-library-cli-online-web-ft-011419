@@ -69,7 +69,7 @@ class MusicLibraryController
     choice = gets.chomp
     if Artist.find_by_name(choice) != nil
       specific_artist = Artist.find_by_name(choice).collect { song }
-      specific_array
+      specific_array = choice.
       puts specific_array
     # specific_array.each_with_index do |mx, i|
     #   puts "#{i+1}. #{mx.song.name}"
